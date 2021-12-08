@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Variables, strings and numbers</title>
+</head>
+  <body>
+<h1>This is the  of the page</h1>
+<script>
+var name = prompt("what is your name");
+var joined = " hello " + name;
+alert(joined);
+var confirmation = confirm("would you like to play enter the dragon");
+    switch(confirmation){
+        case true:
+        var confirmation2 = confirm(name + " would you like to be a dragon slayer");
+            if(confirmation2 == true){
+            var rNumber = Math.floor(Math.random() * 10) + 1;
+                let answer = (rNumber < 10) ? "You have won":"you have lost";
+                alert(answer + " the number is " + rNumber);
+            }else{
+                alert("you are a frightened chicken");
+            }
+            break;
+        case false:
+            alert("you arent brave enough");
+    }
+
+    // returns true if oky is clicked  else false;
+</script>
+</body>
+</html>

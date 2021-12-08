@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DOM Manipulation</title>
+</head>
+<body>
+
+<h1 class="we">Hello,<span id="user" class="we">is this working</span></h1>
+    <p class="qw">Hello there</p>
+    <p class="qw">Hello there</p>
+  <script>
+      var name = "Hassan"; 
+      var mycolor = "green"; 
+// getting element by Id
+      document.getElementById('user').innerHTML = name;
+      document.getElementById('user').style.color = mycolor;
+      // getting elements by tagname and lass name
+    var indexPositions = document.getElementsByClassName('qw')[1].style.color = "blue";// this is because we have multiple classes
+      document.getElementsByClassName('qw')[0].style.color = mycolor;// this is because we have multiple classes
+      console.log(indexPositions);
+      document.getElementsByTagName('p')[0].innerHTML = mycolor;
+      
+     // *****The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.****
+        // usage of querySelectors;
+// note  To return all the matches, use the querySelectorAll() method instead.
+      //  this is nomarly done the same way we do declare css classes and id's.
+      document.querySelector(".we").style.color= mycolor;
+      document.querySelector("a[target]");
+      document.querySelector("h2, h3").style.backgroundColor = "red";
+      document.querySelector("div > p");
+      document.querySelector("#demo").innerHTML = "Hello World!";
+//      document.querySelector(".img").setAttribute('src','img.png');// if the jksj image exist
+//      document.querySelectorAll(".img")[1].style.backgroundColor="red";
+      
+  </script>
+  
+</body>
+</html>

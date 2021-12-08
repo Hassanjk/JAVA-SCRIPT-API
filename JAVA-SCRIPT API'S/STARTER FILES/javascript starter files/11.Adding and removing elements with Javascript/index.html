@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Adding and removing elements with Javascript</title>
+</head>
+<body>
+
+  <ul id="list">
+    <li>Apples</li>
+    <li>Pears</li>
+<!--      the third item has been added with javaScript Okay-->
+  </ul>
+
+  <script>
+// how to set a text-string of a page simple document. write method does it
+// though we really need to be very carefull when using this, cause it actually overrides all existing contents.
+//      document.write("this is a new string from script");
+
+      
+//      myList.pop();
+let index = 2;
+
+let fruits = ['🍏', '🍎', '🍌', '🍇', '🍉'];// index from where are we modifying , secondly how many elements
+fruits.splice(index, 2); 
+
+console.log(fruits);
+      
+      
+      
+      // following the lesson
+            var myList = document.querySelector("#list");// getting the class all-set
+      // creating the list items
+      let number = prompt("enter the number of fruits you would like to add to basket");
+       let  n = 1;
+      for (let i = 0; i < number; i++) {
+         
+          var anotherListItem = document.createElement("li"); // the element to be created in sha Allah
+          var fruit = prompt("enter the " + n + " fruit to be added");
+          var textNode1  = document.createTextNode(fruit);// the inside the element modifications.
+            anotherListItem.appendChild(textNode1);
+            myList.appendChild(anotherListItem);
+          n++;
+          
+}
+      var anotherListIte = document.createElement("li");
+//      var fruit = prompt("enter the " + n + " fruit to be added");
+      var textNode1  = document.createTextNode("new");// the inside the element modifications.
+      anotherListIte.appendChild(textNode1);
+//      // add item to list
+//    ************ we use list.replaceChild and it takes two argument.and to remove removeItem()
+//      myList.appendChild(anotherListItem);
+//      console.log(anotherListItem);
+//      myList.splice(1,3);
+      console.log(myList[3]);
+      
+      // creating a whole new banch of list items.
+//    let number = prompt("enter the number of fruits you would like to add to basket");
+//      var fruitList = document.createElement("li");
+//      for (let i = 0; i < number; i++) {
+//        let  n = 1;
+//          var fruit = prompt("enter the " + n + " fruit to be added");
+//          let theFruit = document.createTextNode(fruit);
+//            fruitList.appendChild(theFruit);
+//          n++;
+//}
+//      console.log(fruitList);
+      
+  </script>
+  
+
+    //references...
+<!--    https://www.educative.io/edpresso/how-to-remove-an-element-from-an-array-in-javascript?utm_term=&utm_campaign=%5BTest%5D+Dynamic+Verticals&utm_source=adwords&utm_medium=ppc&hsa_acc=5451446008&hsa_cam=14045073269&hsa_grp=128822123401&hsa_ad=535845844738&hsa_src=g&hsa_tgt=aud-576728509172:dsa-310094130363&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiAwKyNBhBfEiwA_mrUMoESGd_Wj5h50Uo5q1nmbG0XwtKwHiKDd137X-ogz-vpsdu7GHDU7hoCkTcQAvD_BwE-->
+</body>
+</html>

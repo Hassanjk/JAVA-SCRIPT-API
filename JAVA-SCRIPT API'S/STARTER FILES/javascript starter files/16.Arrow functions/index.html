@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Arrow functions</title>
+</head>
+<body>
+
+  <p id="text"></p>
+
+  <script>
+// if the an anounoumus function is called before its function it wont run , bcz an ano func. insist stored in memory.
+    var num1 = 5;
+    var num2 = 10;
+
+    var anonymousFunction = ()/*parameter remove () */  =>  {
+      document.getElementById('text').innerHTML = num1 * num2;      
+    }
+    
+    // without ano func but with arrow
+       var nonanonymousFunction = num1 =>  {
+      document.getElementById('text').innerHTML = "num1" + num1;      
+    }
+
+    anonymousFunction();
+    nonanonymousFunction(3);
+
+  </script>
+  
+</body>
+</html>

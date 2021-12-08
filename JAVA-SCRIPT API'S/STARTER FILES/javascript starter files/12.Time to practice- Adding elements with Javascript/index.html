@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Time to practice: Adding elements with Javascript</title>
+</head>
+<body>
+
+  <main>
+    <!-- Create the following elements using Javascript: -->
+
+    <!-- <p>Hello, My name is Chris
+    <img src="image.jpg"> -->
+  </main>
+
+  <script>
+
+      var mainQueryTaker = document.querySelector("main");
+        var theDivClass = document.createElement("div");
+          theDivClass.insertAdjacentHTML("beforeend",'<p>Hello, My name is Chris</p>');
+          mainQueryTaker.appendChild(theDivClass);
+          theDivClass.classList.add("mystyle");
+         document.querySelector("div > p").style.color = "red";
+  </script>
+  
+</body>
+</html>
